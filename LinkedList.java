@@ -1,3 +1,4 @@
+                                               // Stupid_wonderer
 public class LinkedList {
     //Node creation
     class Node {
