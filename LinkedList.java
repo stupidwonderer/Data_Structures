@@ -99,6 +99,20 @@ public class LinkedList {
         System.out.print("NULL");
         return;
     }
+    //reverse the list
+    public void reverseList(){
+        if (head==null) System.out.println("NULL");
+        Node prev=null;
+        Node current=head;
+        while(current!=null){
+            head=head.next;
+            current.next=prev;
+            prev=current;
+            current=head;
+        }
+        head=prev;
+        }
+    
     
     // Main
     public static void main(String[] args) {
@@ -116,6 +130,8 @@ public class LinkedList {
         list.addAt("hello",5);
         list.printList();
         list.lSize();
+        list.reverseList();
+        list.printList();
 
 
     }
