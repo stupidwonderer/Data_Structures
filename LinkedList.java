@@ -1,4 +1,6 @@
-                                               // Stupid_wonderer
+package Data_Structures;
+
+
 public class LinkedList {
     //Node creation
     class Node {
@@ -97,6 +99,7 @@ public class LinkedList {
         System.out.print("NULL");
         return;
     }
+    
     // Main
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
