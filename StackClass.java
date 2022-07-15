@@ -1,5 +1,5 @@
-// stack implementation using Linked List 
-public class StackClass {
+package Data_Structures;
+ public class StackClass {
     static class Node{
         int data;
         Node next;
@@ -52,6 +52,10 @@ public class StackClass {
             stc.pop();
         }
         System.out.println(stc.isEmpty());
+        while(!stc.isEmpty()) {
+            System.out.println(stc.peek());
+            stc.pop();
+        }
 
      }
     
