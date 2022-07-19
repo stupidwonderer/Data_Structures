@@ -23,6 +23,67 @@ public class BinaryTree {
             return newNode;
 
             }
+        // traversing
+        
+        //Preorder
+        public static void Preorder(Node root){
+            if(root==null){
+                System.out.print(-1+" ");
+                return;
+            }
+            System.out.print(root.data+" ");
+            Preorder(root.left);
+            Preorder(root.right);
+        }
+
+        //Inorder
+        public static void Inorder(Node root){
+            if(root==null){
+                System.out.print(-1+" ");
+                return ;
+            }
+            Inorder(root.left);
+            System.out.print(root.data+" ");
+            Inorder(root.right);
+        }   
+
+        //Postorder
+        public static void Postorder(Node root){
+            if(root==null){
+                System.out.print(-1+" ");
+                return ;
+            }
+            Postorder(root.left);
+            Postorder(root.right);
+            System.out.print(root.data+" ");
+        }
+        
+        //Levelorder
+        public static void Levelorder(Node root){
+            if(root==null) return;
+            Queue<Node> q = new LinkedList<>();
+            q.add(root);
+            q.add(null);
+            while(!q.isEmpty()){
+                Node current =q.remove();
+                if(current==null){
+                    System.out.println();
+                    if(q.isEmpty()){
+                        break;
+                    }else{
+                    q.add(null);
+                    }
+                }else{
+                    System.out.print(current.data);
+                    if(current.left!=null){
+                    q.add(current.left);
+                    }
+                    if(current.right!=null){
+                    q.add(current.right);
+                    }
+                }
+            }
+        }
 
         }
         public static void main(String[] args) {
